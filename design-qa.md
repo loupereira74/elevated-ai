@@ -167,6 +167,7 @@
 - SEO/social audit passes: `index.html` has production title, description, canonical, favicon, Open Graph, Twitter card, and theme color metadata; `/favicon.ico` and `/og-image.webp` return 200 locally; browser route metadata updates on homepage, field-service, pilot, field-service brief, and regulated field teams with no "Prototype" title remaining.
 - Search filters results; query `pharma` returns the pharma result.
 - Product page expansion audit passes: `/pilot-program`, `/voice-commands`, and `/integrations` load locally with route-specific titles, descriptions, canonicals, relevant hero imagery, one footer, logo-to-home header behavior, no broken images, and no horizontal overflow on desktop or mobile.
+- Unique product hero asset audit passes: `/pilot-program`, `/voice-commands`, and `/integrations` now use distinct generated WebP hero images, each under 46 KB, with route-specific desktop/mobile checks showing no horizontal overflow and one footer per page.
 
 **Follow-up Polish**
 - Add final brand assets when available.

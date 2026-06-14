@@ -42,6 +42,9 @@ import retailHeroImage from "./assets/hero-retail-distribution.webp";
 import builtEnvironmentHeroImage from "./assets/hero-built-environment.webp";
 import clientServicesHeroImage from "./assets/hero-client-services.webp";
 import regulatedHeroImage from "./assets/hero-regulated-field-teams.webp";
+import pilotProgramHeroImage from "./assets/hero-pilot-program.webp";
+import voiceCommandsHeroImage from "./assets/hero-voice-commands.webp";
+import integrationsHeroImage from "./assets/hero-integrations.webp";
 import serviceElectricalImage from "./assets/field-service-electrical-panel.webp";
 import serviceHvacImage from "./assets/field-service-hvac-rooftop.webp";
 import serviceRestorationImage from "./assets/field-service-restoration-moisture.webp";
@@ -2648,7 +2651,7 @@ function PilotProgramPage() {
     <main className="productPage pilotProgramPage" id="top">
       <SiteHeader source="pilot-program" />
 
-      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${pilotWorkshopImage})` }}>
+      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${pilotProgramHeroImage})` }}>
         <div>
           <span className="eyebrow">30-day pilot</span>
           <h1>Prove three automations before changing the whole operation.</h1>
@@ -2720,7 +2723,7 @@ function VoiceCommandsPage() {
     <main className="productPage voiceCommandsPage" id="top">
       <SiteHeader source="voice-commands" />
 
-      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${fieldMemoryHeroImage})` }}>
+      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${voiceCommandsHeroImage})` }}>
         <div>
           <span className="eyebrow">Voice commands</span>
           <h1>Ask your AI assistant to handle the tedious next step.</h1>
@@ -2800,7 +2803,7 @@ function IntegrationsPage() {
     <main className="productPage integrationsPage" id="top">
       <SiteHeader source="integrations" />
 
-      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${securityGovernanceImage})` }}>
+      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${integrationsHeroImage})` }}>
         <div>
           <span className="eyebrow">Integrations</span>
           <h1>APIs move the work into the tools your company already uses.</h1>
