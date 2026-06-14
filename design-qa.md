@@ -1,0 +1,175 @@
+**Findings**
+- No actionable P0/P1/P2 findings remain.
+
+**Source Visual Truth**
+- Source mock: `C:\Users\lpereira\.codex\generated_images\019ec21d-84ec-7222-83b0-aed38ee01e9d\ig_05423a48abd8725d016a2d9cf7eeb8819788b035bcc14daab2.png`
+
+**Implementation Evidence**
+- Local URL: `http://127.0.0.1:5173`
+- Desktop screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\iteration-top.png`
+- Interactive demo screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\iteration-demo-direct.png`
+- Mobile screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\iteration-mobile.png`
+- Mobile demo screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\iteration-mobile-demo-4.png`
+- Field-sales route desktop screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\field-sales-final-top.png`
+- Demo request modal screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\demo-modal-field-sales.png`
+- Demo request success screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\demo-modal-success.png`
+- Mobile demo request modal screenshot: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\demo-modal-mobile.png`
+- Full-view comparison evidence: `C:\Users\lpereira\OneDrive - Rebel Ape Inc\Documents\AI Memory Layer for Work\field-memory-landing\qa-comparison.png`
+- Focused region comparison: Desktop hero, interactive demo, mobile hero, and mobile demo were inspected directly from the screenshots above; additional crop was not needed because the key fidelity surfaces were readable at viewport size.
+- Viewports: desktop `1440x1024`, mobile `390x844`.
+- State: default landing page, with interaction checks for mobile menu, capture mode switching, sample extraction tabs, and search filtering.
+
+**Required Fidelity Surfaces**
+- Fonts and typography: Inter provides a close premium SaaS/product-marketing match. Headline weight, scale, wrapping, and line height were adjusted after QA so the hero aligns with the source proportions and leaves a visible next-section hint.
+- Spacing and layout rhythm: Hero, phone preview, AI extraction panel, industry row, section headers, cards, digest, integrations, and search panel use the source's roomy product-marketing rhythm. Desktop hero now measures `886px` tall in a `1024px` viewport, exposing the next section as required.
+- Colors and visual tokens: White/charcoal foundation with green action/memory accent, red risk, amber attention, blue system cues, and light neutral borders. Palette matches the broad Field Memory direction without becoming a one-note blue/purple SaaS page.
+- Image quality and asset fidelity: Real bitmap assets were generated and placed for the hero and supporting media thumbnails. No placeholder image boxes, CSS art, inline SVG art, or text-symbol substitutes were used for visible imagery. Icons use Phosphor.
+- Copy and content: Content now leads with the sharper customer-facing/CRM wedge: "Your team talks. Your CRM updates. Your company remembers." The page adds before/after pain framing and an interactive sample extraction demo before the existing structured memory, systems, daily intelligence, searchable memory, and final CTA sections.
+- Field-sales route: `/field-sales` adds a buyer-specific page for VP Sales, RevOps, and field managers with the headline "Field reps talk. Your CRM updates itself." It includes stale CRM pain framing, a field-sales-specific sample extraction demo, manager intelligence, revenue-tool integrations, and a focused field-sales CTA.
+- Lead capture: CTAs now open a demo request modal with work email, company, team size, CRM used, and biggest-pain fields. The form submits to an in-prototype success state so the buyer flow can be tested end to end.
+
+**Patches Made Since QA**
+- Reduced desktop headline scale and top spacing so the hero better matches the selected mock.
+- Tightened mobile hero spacing and hid the industry proof row on mobile so the PWA capture preview appears in the first viewport.
+- Adjusted desktop hero height behavior so the next section is visibly hinted at `1440x1024`.
+- Added before/after pain framing.
+- Added an interactive sample extraction demo with Beverage rep, Software AE, and Pharma field team states.
+- Updated hero and final CTA copy around CRM-ready memory and missed field intelligence.
+- Added `/field-sales` route while preserving the broad homepage at `/`.
+- Fixed unnumbered section headers so they do not render a stray period.
+- Added reusable demo request modal and wired it to field-sales and homepage CTAs.
+- Removed dead header links and replaced pricing with a pilot-scope action.
+- Added a concrete 30-day field-sales pilot section with workflow mapping, focused rep launch, manager review, measurement, included deliverables, and pilot CTA.
+- Expanded homepage use-case clusters with Field Sales as the active live page and additional pilot-ready clusters for field service, built environment, client services, and regulated field teams.
+- Updated homepage navigation to Capture, Use cases, Demo, Integrations, and Pilot.
+- Repositioned the broad homepage around "AI work assistant" instead of CRM-specific language, while preserving the CRM-focused `/field-sales` wedge.
+- Sharpened the homepage value proposition around saving time by eliminating manual data entry.
+- Added a three-step "How it works" section and an interactive admin-time ROI calculator to make the time-savings value concrete.
+- Added a homepage trust/control section with human approval, role-based access, audit trail, private memory, and an approval queue preview.
+- Added `/field-service` as the second buyer-specific page for electrical, HVAC, plumbing, roofing/restoration, and property maintenance teams.
+- Added `/app-demo` as a product experience teaser with capture, AI extraction, approval, digest, and search memory screens.
+- Added command-mode positioning: "Capture what happened. Command what happens next."
+- Rebranded the company/platform layer to Elevated AI while keeping Field Memory as the first product line.
+- Replaced the generated logo mark with the supplied Elevated AI logo asset.
+- Expanded the trust section to explain isolated company workspaces, no cross-company memory, scoped integrations, role-based access, and audit history.
+- Repositioned the homepage, field-sales page, field-service page, and app demo around voice capture, voice commands, APIs, and automation replacing tedious manual work.
+- Expanded the homepage command section with six concrete "What can I say?" voice examples and a four-step Voice intent -> AI draft -> Human review -> API execution automation flow.
+- Added a homepage "Start with three tedious workflows" section that frames the pilot around Capture updates, Trigger follow-ups, and Move work into systems.
+- Added a homepage "Automation with guardrails" section covering human approval, allowed automations, scoped API access, audit history, role permissions, and private company instances.
+- Moved the homepage use-case section directly after "How it works" and rewrote the cards around teams where work happens away from the keyboard.
+- Added a dedicated `/security` page for private company instances, human approval, scoped integrations, admin controls, audit logs, retention, and execution workflow.
+- Added an interactive homepage product walkthrough with five steps: Speak, Understand, Draft, Review, and Sync.
+- Wired the pilot/demo request form to open a prefilled email to `hello@elevatedai.com` with request type, work email, company, team size, primary system, biggest pain, and source page.
+- Refined `/field-service` as a sharper contractor sales asset with three trades automations: Send invoice and photos, Create quote follow-up, and Update work order.
+- Expanded the `/field-service` 30-day pilot section with a week-by-week rollout and six-metric contractor scorecard.
+- Added a `/field-service` trade examples section for electrical, HVAC, plumbing, roofing/restoration, and property maintenance jobs.
+- Added a forwardable `/field-service` pilot summary section with "What your team gets in 30 days" and "What we need from you" checklists.
+- Added `/field-service-brief` as a one-page, print-friendly pilot brief with first 3 automations, week-by-week rollout, scorecard, buyer inputs, and mailto CTA.
+- Added a print button to `/field-service-brief` and lightweight analytics hooks for lead email starts, brief print clicks, and brief reply clicks.
+- Added "Last updated June 13, 2026" and suggested short URL metadata to `/field-service-brief`.
+- Converted the remaining homepage use-case cards from static status labels into real lightweight landing pages for Retail & Distribution, Built Environment, Client Services, and Healthcare & Regulated Field Teams.
+- Generated and added dedicated hero image assets for the new Retail & Distribution, Built Environment, Client Services, and Healthcare & Regulated Field Teams pages.
+- Replaced the shared homepage, field-sales, and field-service hero image with distinct page-specific hero assets.
+- Optimized large photo and hero assets by adding WebP versions and updating the app to load WebP for page imagery while keeping PNG source masters in `src/assets`.
+- Added a Supabase-backed `/pilot` request page with a polished web form, lazy-loaded Supabase submission helper, `.env.example`, and `supabase/pilot_requests.sql` table/RLS setup.
+- Routed primary homepage, field-sales, field-service, and use-case landing page CTAs to `/pilot` instead of the mailto-first modal flow.
+- Cleaned `/pilot` prospect-facing form copy so Supabase, table, and env-var setup language is not visible in the normal page experience.
+- Replaced the one-line `/pilot` success message with a polished thank-you panel showing next steps and links to the app demo, sample pilot brief, and another request.
+- Added a Supabase Edge Function scaffold at `supabase/functions/pilot-request-notify` to send Resend email notifications after pilot requests are saved.
+- Updated the frontend Supabase helper to invoke the email notification function as a best-effort step after successful lead insert.
+- Deployed `pilot-request-notify` to Supabase project `lvvwtmjaudpjjottztbr` and configured Resend secrets for `hello@elevatedai.com` delivery.
+- Normalized the primary site header across homepage, buyer pages, security, pilot, and use-case pages with one shared navigation pattern: logo-to-home, Use cases, App demo, Security, and Request pilot.
+- Cleaned app demo and field-service brief headers to align with the same navigation language while preserving the brief's Print action.
+- Removed the redundant plain Pilot link from the shared header so Request pilot is the single conversion action.
+- Added a top-level hash-scroll effect so cross-page anchor links like `/#use-cases` land on the intended section after React renders.
+- Changed the header logo to link to `/` from every route and removed redundant Home text links from shared, app-demo, and field-service brief headers.
+- Added new WebP assets for field-service electrical, HVAC, restoration, security governance, and pilot workshop scenes so page imagery is more relevant and less repetitive.
+- Replaced mismatched field-service sample photos with trade-specific proof-of-work imagery and added page-level visuals to app demo, security, pilot, and field-service brief pages.
+- Polished sitewide copy for first-impression quality: use-case cards now use "Explore..." CTAs instead of "View page," public CTAs spell out "three" instead of shorthand "3," and remaining old Field Memory references were replaced with Elevated AI.
+- Converted phone-preview navigation from anchor links to buttons so mockup controls do not create dead page anchors on buyer-specific pages.
+- Replaced the one-off app demo header with the shared site header and adjusted app demo hero spacing so it matches the rest of the site on desktop and mobile.
+- Replaced the one-off field-service brief header with the shared site header, moved Print brief into the brief metadata area, and added the same dark top treatment used across the site.
+- Removed remaining mailto handoffs from the legacy modal and field-service brief CTA; brief CTA now routes to `/pilot?source=field-service-brief-cta`.
+
+**Open Questions**
+- None blocking. Brand name, final logo, and real customer/system names can be swapped once those are decided.
+
+**Implementation Checklist**
+- Build succeeded with `npm run build`.
+- Local Vite server is running at `http://127.0.0.1:5173`.
+- Mobile menu opens and closes.
+- Capture mode controls switch selected state.
+- Interactive sample tabs update extraction output for Software AE and Pharma field team.
+- Field-sales route loads at `/field-sales`; the Account meeting sample updates to show the Regional expansion output.
+- Broad homepage still loads at `/`.
+- Demo request modal opens from the field-sales hero CTA.
+- Demo request form submits to the "Demo request captured" success state.
+- Demo request modal renders in a readable, scrollable mobile layout.
+- Header links now resolve to real routes, real page sections, or open the pilot-scope modal.
+- Field-sales pilot CTA opens the pilot-scope modal.
+- Homepage use-case section renders six clusters: Revenue Teams, Retail & Distribution, Field Service & Trades, Built Environment, Client Services, and Healthcare & Regulated Field Teams.
+- Homepage hero and pilot modal now use AI work assistant language; the general modal asks for "Primary system" and broad work-capture pains instead of CRM-only details.
+- Homepage hero now leads with "Stop doing manual data entry," adds benefit chips for admin time savings, and reinforces automatic update drafting in the demo, capture, systems, and final CTA sections.
+- ROI calculator updates from user-entered team size and minutes-per-day inputs; default `25 people x 30 minutes/day` shows `63 hours/week`, and `50 people x 30 minutes/day` shows `125 hours/week`.
+- Trust CTA opens the general AI work assistant pilot modal; approval queue stacks cleanly on mobile at `390px` width.
+- Homepage use-case section now links to both `/field-sales` and `/field-service`.
+- Field-service page includes paperwork pain framing, interactive job-note demo, proof-of-work section, 30-day pilot plan, approval queue, service-system integrations, and field-service-specific pilot modal.
+- App demo route loads at `/app-demo`; all five tabs update the narrative and PWA preview, and the layout fits mobile at `390px` width.
+- App demo now includes a sixth Commands tab for voice actions like email, invoices, schedule lookup, follow-ups, and review-before-send.
+- Homepage command section renders six voice command examples and stacks cleanly on mobile at `390px` width.
+- Header logo now presents Elevated AI with Field Memory as the product label; homepage, app demo, and general pilot modal introduce "Field Memory by Elevated AI."
+- Supplied Elevated AI logo renders in white in the homepage, app demo, and mobile headers at `46px` height without the Field Memory product label.
+- Trust section now presents a private workspace preview for "Smith Electric Co." and explicitly states no cross-company memory sharing.
+- Homepage hero now reads "Talk to your AI assistant. Get work done." and the command section explicitly describes voice commands, APIs, automation, and human review before external actions.
+- Command section renders six voice command examples, four automation-flow steps, and stacks without horizontal overflow at mobile width.
+- Homepage header and hero CTAs now point to "Map your first 3 automations"; the new automation cards stack cleanly on mobile without horizontal overflow.
+- Guardrails section renders the admin policy preview and stacks cleanly on mobile without horizontal overflow.
+- Use-case section now renders six buyer-fit cards near the top of the homepage and stacks cleanly on mobile without horizontal overflow.
+- Security page loads at `/security`, is linked from the homepage header, and stacks cleanly on mobile without horizontal overflow.
+- Walkthrough section renders five steps, updates the preview when selecting Sync, is linked from the homepage header, and stacks cleanly on mobile without horizontal overflow.
+- Conversion flow is now unified around `/pilot`: no demo request modal, no `mailto:` handoff, and no duplicate "Pilot" versus "Request pilot" paths.
+- Field-service page now includes the three trades automation cards, links to them from the header, and stacks the section cleanly on mobile without horizontal overflow.
+- Field-service pilot section now renders Week 1-4 rollout steps and a six-item scorecard; the expanded section stacks cleanly on mobile without horizontal overflow.
+- Field-service trade examples section renders five job-type cards, is linked from the header as Jobs, and stacks cleanly on mobile without horizontal overflow.
+- Field-service pilot summary section renders two checklists, is linked from the header as Summary, and stacks cleanly on mobile without horizontal overflow.
+- Field-service brief route loads at `/field-service-brief`, is linked from `/field-service`, sends CTA traffic to `/pilot?source=field-service-brief-cta`, and stacks cleanly on mobile without horizontal overflow.
+- Field-service brief now shows a Print brief button, keeps pilot CTA traffic on the web form, and remains mobile-clean with no horizontal overflow.
+- Field-service brief metadata renders under the headline and remains mobile-clean with no horizontal overflow.
+- Homepage use-case cards now all link to actual pages; no static "Pilot-ready" or "Compliance review" footer labels remain.
+- New use-case routes load at `/retail-distribution`, `/built-environment`, `/client-services`, and `/regulated-field-teams`; each renders three example cards, three automation cards, a pilot section, and mobile-clean stacking with no horizontal overflow.
+- New use-case hero pages load their generated hero background assets with readable overlay treatment; mobile checks show no horizontal overflow.
+- Homepage, field-sales, and field-service routes now load distinct hero backgrounds: broad AI assistant, customer meeting, and field technician respectively.
+- WebP image audit passes across `/`, `/field-sales`, `/field-service`, `/retail-distribution`, `/built-environment`, `/client-services`, and `/regulated-field-teams`; no broken images and no horizontal overflow.
+- Pilot page loads at `/pilot`, renders required fields for work email, company, and manual work, and shows a clear Supabase configuration notice when env vars are not set.
+- Homepage primary pilot links route to `/pilot?source=home-header`, `/pilot?source=home-hero`, and `/pilot?source=home-nav`; `/pilot` stacks cleanly on mobile with no horizontal overflow.
+- Pilot form copy audit passes with no visible developer-facing Supabase/env/table terms in normal page content.
+- Pilot form success state submits to Supabase, renders Review workflow / Map automations / Scope pilot next steps, and remains clean with no horizontal overflow.
+- Resend notification function is documented in `supabase/functions/README.md`; `RESEND_API_KEY` stays in Supabase secrets and is never exposed to Vite/browser code.
+- Resend direct function check returns `{"ok":true}` using `Elevated AI <hello@elevatedai.com>` as the sender and `hello@elevatedai.com` as the notification recipient.
+- Header audit passes across `/`, `/field-sales`, `/field-service`, `/security`, `/pilot`, `/retail-distribution`, `/app-demo`, and `/field-service-brief` with no horizontal overflow.
+- Mobile nav audit on `/field-service` renders Use cases, App demo, Security, and Request pilot with no Home/Pilot duplicates and no horizontal overflow.
+- Header link retest confirms no plain Pilot link remains; shared header now renders logo-to-home, Use cases, App demo, Security, and Request pilot.
+- Logo/home audit passes across `/`, `/field-service`, `/pilot`, `/regulated-field-teams`, `/app-demo`, and `/field-service-brief`; header logo links to `/` and no header Home text links remain.
+- Logo click test from `/field-service` navigates to `/`.
+- Image audit passes across `/`, `/field-sales`, `/field-service`, `/retail-distribution`, `/built-environment`, `/client-services`, `/regulated-field-teams`, `/security`, `/app-demo`, `/pilot`, and `/field-service-brief`; no broken images and no horizontal overflow.
+- Hero/background imagery is unique across the major page families: homepage, field sales, field service, retail/distribution, built environment, client services, regulated field teams, security, and pilot.
+- Field-service sample tab audit passes: Electrical job, HVAC visit, and Restoration check each render a distinct relevant work-proof image.
+- App demo extraction screen now renders electrical and restoration proof images; mobile image audit passes on `/`, `/field-service`, `/security`, `/app-demo`, `/pilot`, `/field-service-brief`, and `/regulated-field-teams`.
+- Copy audit passes across `/`, `/field-sales`, `/field-service`, `/retail-distribution`, `/built-environment`, `/client-services`, `/regulated-field-teams`, `/security`, `/app-demo`, `/pilot`, and `/field-service-brief`; no old "View page" CTAs, no visible Field Memory references, no shorthand "first 3" CTAs, no dead anchors, and no horizontal overflow.
+- App demo header audit passes: `/app-demo` now renders the shared header with logo-to-home, Use cases, App demo, Security, and Request pilot; mobile menu matches the shared pattern and content clears the absolute header.
+- Field-service brief header audit passes: `/field-service-brief` now renders the shared header with logo-to-home, Use cases, App demo, Security, and Request pilot; Print brief remains available, mobile menu matches the shared pattern, and content clears the absolute header.
+- Mailto audit passes: no `mailto:` links remain in source or rendered `/field-service-brief`; clicking the brief CTA navigates to `/pilot?source=field-service-brief-cta`.
+- Use cases click test from `/field-service`, `/pilot`, `/regulated-field-teams`, and `/app-demo` lands on `/#use-cases` with the use-case section in view.
+- Homepage, field-sales, and field-service pages include links into `/app-demo`.
+- Conversion-flow retest passes: homepage "Map your first three automations" CTAs both route to `/pilot`, `/field-service-brief` has one "Map this pilot" CTA to `/pilot?source=field-service-brief-cta`, and `/pilot` now presents "Map your first three automations" with "Share your pilot details" as the form section.
+- Source cleanup audit passes: no `DemoRequestModal`, modal CSS, `onOpenPilot`, `demoOpen`, `mailto:`, or old mail handoff handlers remain in `src`.
+- Shared footer audit passes across homepage, field-service, pilot, app-demo, field-service brief, and regulated field teams: one footer per page, no `mailto:` links, 14 internal footer links, desktop/mobile layouts have no horizontal overflow, and print output hides the footer on the brief.
+- SEO/social audit passes: `index.html` has production title, description, canonical, favicon, Open Graph, Twitter card, and theme color metadata; `/favicon.ico` and `/og-image.webp` return 200 locally; browser route metadata updates on homepage, field-service, pilot, field-service brief, and regulated field teams with no "Prototype" title remaining.
+- Search filters results; query `pharma` returns the pharma result.
+
+**Follow-up Polish**
+- Add final brand assets when available.
+- Replace generated industry imagery with customer-approved photography if this moves toward production.
+- Tune final copy around the primary buyer once ICP is chosen.
+
+final result: passed

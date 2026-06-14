@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.npm-cache/
+.npmrc
+
+.env
+.env.*
+!.env.example
+
+supabase/.temp/
+supabase/Database Password.txt
+
+/*.png
+src/assets/*.png
+!src/assets/elevated-ai-logo.png
