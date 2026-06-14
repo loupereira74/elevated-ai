@@ -173,6 +173,7 @@
 - Mobile hero crop audit passes: homepage, field sales, field service, use-case pages, security, pilot, pilot-program, voice-commands, and integrations now use page-specific mobile background positions instead of the generic center crop; no horizontal overflow across audited routes.
 - Mobile menu readability audit passes: app-demo and voice-commands mobile menus render dark readable links on the white menu panel with no horizontal overflow.
 - App demo mobile UX audit passes: demo screen selector now renders as a compact 3-by-2 segmented grid, narrative media is hidden on mobile, tab clicks update the PWA screen, and no horizontal overflow appears.
+- Pilot sales brief route loads at `/pilot-brief`, renders a general forwardable brief with core promise, pilot shape, first three automation framing, discovery questions, positioning language, print control, footer link, and CTA to `/pilot?source=pilot-brief-cta`; desktop and mobile checks show no broken image, no horizontal overflow, readable mobile menu, and one footer.
 
 **Follow-up Polish**
 - Add final brand assets when available.

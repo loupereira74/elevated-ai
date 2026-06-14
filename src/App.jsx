@@ -767,6 +767,7 @@ function SiteFooter() {
         <div>
           <strong>Pilot</strong>
           <a href="/pilot-program">Pilot program</a>
+          <a href="/pilot-brief">Pilot sales brief</a>
           <a href="/pilot#pilot-form">Map first automations</a>
           <a href="/field-service-brief">Field-service brief</a>
           <a href="/pilot?source=footer">Start a 30-day pilot</a>
@@ -2452,6 +2453,148 @@ function FieldServiceBriefPage() {
   );
 }
 
+const pilotBriefAutomations = [
+  {
+    title: "Capture the work",
+    example: "Turn this visit into notes, follow-ups, risks, and customer history.",
+    outcome: "Voice, photos, videos, and notes become structured records your team can review.",
+  },
+  {
+    title: "Command the next step",
+    example: "Send the recap, create the task, update the system, and remind me Tuesday.",
+    outcome: "Elevated AI drafts the action and routes it through the right approval path.",
+  },
+  {
+    title: "Sync approved updates",
+    example: "Save the approved notes, email, task, schedule item, and account update.",
+    outcome: "APIs move clean information into the business systems your team already uses.",
+  },
+];
+
+const pilotBriefQuestions = [
+  "Where does your team still retype information after calls, visits, jobs, meetings, or inspections?",
+  "Which three updates would create the most time savings if AI drafted them automatically?",
+  "Which systems need to be updated first: CRM, email, calendar, field service, tickets, ERP, or knowledge base?",
+  "Who needs to review or approve AI-drafted work before it is sent or synced?",
+  "What evidence matters: photos, videos, documents, customer requests, risks, signatures, or notes?",
+  "What does success look like after 30 days: hours saved, follow-ups captured, records completed, or rework reduced?",
+];
+
+function PilotBriefPage() {
+  const briefUpdated = "June 14, 2026";
+  const briefShortUrl = "elevatedai.com/pilot-brief";
+  const handlePrint = () => {
+    trackEvent("pilot_brief_print_clicked");
+    window.print();
+  };
+  const handlePilotClick = () => trackEvent("pilot_brief_pilot_clicked");
+
+  return (
+    <main className="briefPage" id="top">
+      <SiteHeader source="pilot-brief" />
+
+      <section className="briefSheet">
+        <div className="briefHero">
+          <span className="eyebrow">Forwardable pilot brief</span>
+          <h1>Elevated AI Pilot Sales Brief</h1>
+          <div className="briefMetaLine">
+            <span>Last updated {briefUpdated}</span>
+            <span>Suggested short URL: {briefShortUrl}</span>
+            <button className="briefPrintButton" type="button" onClick={handlePrint}>Print brief</button>
+          </div>
+          <p>Elevated AI helps teams save time by using voice capture, voice commands, APIs, and automation to reduce manual data entry, draft tedious follow-ups, and preserve company memory.</p>
+          <div className="briefHeroMedia">
+            <img src={pilotWorkshopImage} alt="" />
+            <div>
+              <strong>Core promise</strong>
+              <span>Your people talk naturally. Elevated AI organizes the work, prepares the next action, and keeps humans in control before systems update.</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="briefMetaGrid">
+          <article>
+            <strong>Who it is for</strong>
+            <p>Field teams, sales teams, operators, client-service teams, regulated reps, and managers who lose time to manual updates after real work happens.</p>
+          </article>
+          <article>
+            <strong>Pilot shape</strong>
+            <p>One team or workflow, three mapped automations, connected systems, human review rules, and a 30-day scorecard for time savings and follow-through.</p>
+          </article>
+        </div>
+
+        <section className="briefBlock">
+          <div>
+            <span className="eyebrow">Buyer message</span>
+            <h2>Stop paying your best people to do data entry.</h2>
+          </div>
+          <div className="briefThree">
+            {pilotBriefAutomations.map(({ title, example, outcome }) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <p>"{example}"</p>
+                <span>{outcome}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="briefBlock">
+          <div>
+            <span className="eyebrow">30-day pilot</span>
+            <h2>Prove value with a small, measured rollout.</h2>
+          </div>
+          <div className="briefTimeline">
+            {pilotProgramSteps.map(([week, title, text]) => (
+              <article key={week}>
+                <span>{week}</span>
+                <strong>{title}</strong>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="briefBlock briefTwoColumn">
+          <article>
+            <span className="eyebrow">Discovery</span>
+            <h2>Questions to ask first</h2>
+            <div>
+              {pilotBriefQuestions.map((item) => (
+                <b key={item}><CheckCircle size={15} weight="fill" />{item}</b>
+              ))}
+            </div>
+          </article>
+          <article>
+            <span className="eyebrow">Positioning</span>
+            <h2>How to explain it</h2>
+            <div>
+              {[
+                "Elevated AI is a voice-first work assistant, not another system employees have to update.",
+                "The pilot starts with the most tedious workflows, not a full software replacement.",
+                "Company data is separated by customer workspace with scoped integrations and review controls.",
+                "Pricing should be scoped by team size, systems, automation complexity, and support needs.",
+                "The strongest ROI is less manual admin, fewer missed follow-ups, and better organizational memory.",
+              ].map((item) => (
+                <b key={item}><CheckCircle size={15} weight="fill" />{item}</b>
+              ))}
+            </div>
+          </article>
+        </section>
+
+        <section className="briefCta">
+          <div>
+            <strong>Ready to map a pilot?</strong>
+            <p>Use the pilot form to share the team, systems, and manual work you want Elevated AI to reduce first. We will map the first three automations around your real workflow.</p>
+          </div>
+          <a className="button primary large" href="/pilot?source=pilot-brief-cta" onClick={handlePilotClick}>Map a pilot</a>
+        </section>
+      </section>
+      <SiteFooter />
+    </main>
+  );
+}
+
 const pilotUseCases = [
   "Field service & trades",
   "Field sales",
@@ -2676,7 +2819,7 @@ function PilotPage() {
               </div>
               <div className="pilotSuccessActions">
                 <a className="button primary" href="/app-demo">View app demo</a>
-                <a className="watchLink dark" href="/field-service-brief">Open sample pilot brief <ArrowRight size={18} /></a>
+                <a className="watchLink dark" href="/pilot-brief">Open pilot sales brief <ArrowRight size={18} /></a>
                 <button
                   type="button"
                   onClick={() => {
@@ -3060,6 +3203,10 @@ const routeMeta = {
     title: "30-Day Field Service Pilot Brief | Elevated AI",
     description: "A forwardable 30-day pilot brief for field service teams using voice capture and automation to reduce admin work.",
   },
+  "/pilot-brief": {
+    title: "Pilot Sales Brief | Elevated AI",
+    description: "A forwardable Elevated AI pilot brief covering the core promise, pilot offer, example automations, security posture, pricing language, and discovery questions.",
+  },
   "/app-demo": {
     title: "App Demo | Elevated AI",
     description: "See how Elevated AI turns voice capture and voice commands into structured work, review queues, digests, and searchable company memory.",
@@ -3154,6 +3301,9 @@ export function App() {
   }
   if (path === "/field-service-brief") {
     return <FieldServiceBriefPage />;
+  }
+  if (path === "/pilot-brief") {
+    return <PilotBriefPage />;
   }
   if (path === "/security") {
     return <SecurityPage />;
