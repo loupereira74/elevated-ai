@@ -172,6 +172,7 @@
 - Homepage trust/conversion audit passes: added a "Works with your systems" strip with seven system categories and a `/integrations` link, plus six pilot outcomes measured; desktop/mobile checks show no horizontal overflow.
 - Mobile hero crop audit passes: homepage, field sales, field service, use-case pages, security, pilot, pilot-program, voice-commands, and integrations now use page-specific mobile background positions instead of the generic center crop; no horizontal overflow across audited routes.
 - Mobile menu readability audit passes: app-demo and voice-commands mobile menus render dark readable links on the white menu panel with no horizontal overflow.
+- App demo mobile UX audit passes: demo screen selector now renders as a compact 3-by-2 segmented grid, narrative media is hidden on mobile, tab clicks update the PWA screen, and no horizontal overflow appears.
 
 **Follow-up Polish**
 - Add final brand assets when available.

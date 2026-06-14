@@ -4407,11 +4407,13 @@ select,
 
 @media (max-width: 760px) {
   .appDemoHero {
-    padding: 108px 20px 36px;
+    gap: 22px;
+    padding: 108px 20px 34px;
   }
 
   .appDemoIntro h1 {
-    font-size: 40px;
+    font-size: 38px;
+    line-height: 1.02;
   }
 
   .appDemoIntro p {
@@ -4469,20 +4471,37 @@ select,
 
   .appDemoTabs {
     display: grid;
-    grid-template-columns: 1fr;
+    gap: 8px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 2px;
   }
 
   .appDemoTabs button {
-    border-radius: 7px;
-    justify-content: flex-start;
+    border-radius: 999px;
+    font-size: 13px;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 8px;
+    white-space: nowrap;
   }
 
   .demoNarrative {
+    min-height: 0;
     padding: 22px;
   }
 
-  .demoNarrativeImage {
-    margin-top: 18px;
+  .demoNarrative h2 {
+    font-size: 28px;
+    margin: 16px 0 10px;
+  }
+
+  .demoNarrative p {
+    font-size: 15px;
+  }
+
+  .demoNarrativeImage,
+  .demoNarrativeMeta {
+    display: none;
   }
 
   .pwaShell {
