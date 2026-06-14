@@ -169,6 +169,7 @@
 - Product page expansion audit passes: `/pilot-program`, `/voice-commands`, and `/integrations` load locally with route-specific titles, descriptions, canonicals, relevant hero imagery, one footer, logo-to-home header behavior, no broken images, and no horizontal overflow on desktop or mobile.
 - Unique product hero asset audit passes: `/pilot-program`, `/voice-commands`, and `/integrations` now use distinct generated WebP hero images, each under 46 KB, with route-specific desktop/mobile checks showing no horizontal overflow and one footer per page.
 - Homepage conversion polish audit passes: use-case cards now show six concise outcome lines, the pilot path section links to `/pilot-program` as a learn-more step, and desktop/mobile checks show no horizontal overflow.
+- Homepage trust/conversion audit passes: added a "Works with your systems" strip with seven system categories and a `/integrations` link, plus six pilot outcomes measured; desktop/mobile checks show no horizontal overflow.
 
 **Follow-up Polish**
 - Add final brand assets when available.

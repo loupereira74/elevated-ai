@@ -700,6 +700,45 @@ img {
   border-top: 1px solid var(--line);
 }
 
+.pilotOutcomesSection {
+  border-top: 1px solid var(--line);
+}
+
+.pilotOutcomeGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pilotOutcomeGrid article {
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 24px 1fr;
+  padding: 20px;
+}
+
+.pilotOutcomeGrid svg {
+  color: var(--green-dark);
+  margin-top: 1px;
+}
+
+.pilotOutcomeGrid strong {
+  display: block;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.pilotOutcomeGrid p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 7px 0 0;
+}
+
 .tradeAutomationSection {
   border-top: 1px solid var(--line);
 }
@@ -2688,6 +2727,41 @@ select {
   color: var(--muted);
 }
 
+.systemsStripSection {
+  align-items: center;
+  background: #eef8ee;
+  border: 1px solid #d6e8d4;
+  border-radius: var(--radius);
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.2fr) auto;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 24px;
+}
+
+.systemsStripSection h2 {
+  font-size: clamp(22px, 2.2vw, 32px);
+  line-height: 1.12;
+  margin: 8px 0 0;
+}
+
+.systemsStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.systemsStrip span {
+  background: #fff;
+  border: 1px solid rgba(57, 169, 53, 0.24);
+  border-radius: 999px;
+  color: #26322a;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 8px 11px;
+}
+
 .painGrid {
   display: grid;
   gap: 20px;
@@ -4241,7 +4315,8 @@ select,
   .productTimeline,
   .commandExampleGrid,
   .integrationGroupGrid,
-  .scorecardGrid {
+  .scorecardGrid,
+  .pilotOutcomeGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -4263,8 +4338,13 @@ select,
   .walkthroughSection,
   .walkthroughStage,
   .guardrailsSection,
-  .commandSection {
+  .commandSection,
+  .systemsStripSection {
     grid-template-columns: 1fr;
+  }
+
+  .systemsStripSection {
+    margin-inline: 28px;
   }
 
   .automationFlow {
@@ -4493,11 +4573,17 @@ select,
   .scorecardGrid,
   .productSplitSection,
   .useCaseGrid,
+  .pilotOutcomeGrid,
   .howGrid,
   .commandGrid,
   .metricRow,
   .searchControls {
     grid-template-columns: 1fr;
+  }
+
+  .systemsStripSection {
+    margin: 0 20px;
+    padding: 22px;
   }
 
   .howSection,

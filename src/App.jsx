@@ -194,6 +194,25 @@ const firstAutomations = [
   },
 ];
 
+const pilotOutcomes = [
+  ["Admin hours reduced", "Track the manual follow-up, note entry, and system update work that no longer needs to be typed from scratch."],
+  ["Follow-ups captured", "Count reminders, emails, tasks, and customer asks that would otherwise live in someone's head or inbox."],
+  ["Records completed", "Measure customer, job, project, ticket, and account records drafted or updated from natural work capture."],
+  ["Emails and tasks drafted", "See how much routine communication and assignment work is prepared for review."],
+  ["Photos and videos attached", "Confirm proof, site context, documents, and media are connected to the right customer or work item."],
+  ["Review accuracy", "Compare drafted actions against approved edits so the pilot gets safer and sharper each week."],
+];
+
+const systemStripItems = [
+  "CRM",
+  "Email & calendar",
+  "Field service",
+  "Project tools",
+  "Ticketing",
+  "ERP",
+  "Knowledge base",
+];
+
 const guardrails = [
   ["Human approval", "Choose which actions need review before an email is sent, an invoice is shared, or a system is updated."],
   ["Allowed automations", "Admins define which voice commands are enabled by role, team, system, and workflow."],
@@ -1152,6 +1171,21 @@ function UseCasesSection() {
   );
 }
 
+function SystemsStripSection() {
+  return (
+    <section className="systemsStripSection" aria-label="Systems Elevated AI works with">
+      <div>
+        <span className="eyebrow">Works with your systems</span>
+        <h2>Voice capture becomes useful when it lands in the tools your team already uses.</h2>
+      </div>
+      <div className="systemsStrip">
+        {systemStripItems.map((item) => <span key={item}>{item}</span>)}
+      </div>
+      <a className="watchLink dark" href="/integrations">See integrations <ArrowRight size={18} /></a>
+    </section>
+  );
+}
+
 function HowItWorksSection() {
   return (
     <section className="contentSection howSection" id="how-it-works">
@@ -1251,6 +1285,29 @@ function FirstAutomationsSection() {
           <a className="button primary large" href="/pilot?source=home-first-automations">Map your first three automations</a>
           <a className="watchLink dark" href="/pilot-program">See the 30-day pilot <ArrowRight size={18} /></a>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PilotOutcomesSection() {
+  return (
+    <section className="contentSection pilotOutcomesSection">
+      <div className="sectionHeader">
+        <span className="eyebrow">Pilot outcomes we measure</span>
+        <h2>Prove the time savings before you scale.</h2>
+        <p>A good pilot should produce evidence. Elevated AI tracks the operational work reduced, the follow-ups saved, and the records completed from real voice capture and commands.</p>
+      </div>
+      <div className="pilotOutcomeGrid">
+        {pilotOutcomes.map(([title, text]) => (
+          <article key={title}>
+            <CheckCircle size={19} weight="fill" />
+            <div>
+              <strong>{title}</strong>
+              <p>{text}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -2047,9 +2104,13 @@ function HomePage() {
 
       <UseCasesSection />
 
+      <SystemsStripSection />
+
       <CommandModeSection />
 
       <FirstAutomationsSection />
+
+      <PilotOutcomesSection />
 
       <ProductWalkthroughSection />
 
