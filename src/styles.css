@@ -4418,7 +4418,16 @@ select,
     padding: 108px 20px 34px;
   }
 
+  .securityPage .visualSecurityHero {
+    background-position: center center, 70% center;
+  }
+
+  .useCaseHero {
+    background-position: center center, 72% center;
+  }
+
   .pilotHero {
+    background-position: center center, 72% center;
     min-height: auto;
     padding: 108px 20px 34px;
   }
@@ -4426,6 +4435,18 @@ select,
   .productHero {
     min-height: auto;
     padding: 108px 20px 34px;
+  }
+
+  .pilotProgramPage .productHero {
+    background-position: center center, 72% center;
+  }
+
+  .voiceCommandsPage .productHero {
+    background-position: center center, 76% center;
+  }
+
+  .integrationsPage .productHero {
+    background-position: center center, 72% center;
   }
 
   .securityHero h1,
@@ -4489,7 +4510,16 @@ select,
   }
 
   .hero {
+    background-position: 74% center;
     min-height: auto;
+  }
+
+  .fieldSalesPage .hero {
+    background-position: 72% center;
+  }
+
+  .fieldServicePage .hero {
+    background-position: 74% center;
   }
 
   .heroContent {
