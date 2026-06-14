@@ -545,6 +545,7 @@ const useCaseClusters = [
   {
     title: "Revenue Teams",
     summary: "Reps talk after customer visits. Elevated AI drafts CRM notes, follow-ups, emails, and account updates.",
+    outcome: "Reduce CRM admin and missed follow-ups.",
     examples: ["Field Sales", "Customer Success", "Sales Engineers", "Solutions Consultants"],
     href: "/field-sales",
     action: "Explore revenue teams",
@@ -552,6 +553,7 @@ const useCaseClusters = [
   {
     title: "Retail, Restaurants & Multi-Unit Operations",
     summary: "Store, restaurant, and district teams capture visits, audits, issues, photos, and follow-ups while automation routes tasks and field intelligence.",
+    outcome: "Capture store issues, audits, and field intel.",
     examples: ["QSR / franchise operators", "Retail execution", "Beverage / CPG reps", "Multi-unit operations"],
     href: "/retail-distribution",
     action: "Explore multi-unit teams",
@@ -559,6 +561,7 @@ const useCaseClusters = [
   {
     title: "Field Service & Trades",
     summary: "Technicians talk through the job. Elevated AI drafts work-order notes, quote follow-ups, and proof updates.",
+    outcome: "Turn job notes, photos, and commands into office-ready work.",
     examples: ["Electrical contractors", "HVAC companies", "Plumbing companies", "Roofing / restoration"],
     href: "/field-service",
     action: "Explore service teams",
@@ -566,6 +569,7 @@ const useCaseClusters = [
   {
     title: "Built Environment",
     summary: "Architects, engineers, and site teams capture observations, inspections, decisions, and project actions from the field.",
+    outcome: "Preserve site decisions, risks, and project actions.",
     examples: ["Architects", "Engineers", "Property maintenance", "Construction services"],
     href: "/built-environment",
     action: "Explore project teams",
@@ -573,6 +577,7 @@ const useCaseClusters = [
   {
     title: "Client Services",
     summary: "Advisors and client teams turn meetings into follow-ups, emails, risks, client history, and firm memory.",
+    outcome: "Convert client conversations into follow-through and firm memory.",
     examples: ["Accountants", "Attorneys", "Consultants", "Financial advisors"],
     href: "/client-services",
     action: "Explore client teams",
@@ -580,6 +585,7 @@ const useCaseClusters = [
   {
     title: "Healthcare & Regulated Field Teams",
     summary: "Regulated teams document visits, requests, inventory risks, and sensitive follow-ups with approval controls.",
+    outcome: "Document sensitive work with review and audit controls.",
     examples: ["Pharma Field Teams", "Medical device reps", "Home health", "Compliance auditors"],
     href: "/regulated-field-teams",
     action: "Explore regulated teams",
@@ -1128,6 +1134,7 @@ function UseCasesSection() {
           <article className={cluster.href ? "useCaseCard active" : "useCaseCard"} key={cluster.title}>
             <div>
               <strong>{cluster.title}</strong>
+              <span className="useCaseOutcome">{cluster.outcome}</span>
               <p>{cluster.summary}</p>
             </div>
             <ul>
@@ -1240,7 +1247,10 @@ function FirstAutomationsSection() {
           <strong>Good pilot question:</strong>
           <p>Which three manual workflows would save your team the most time if people could simply say what they need?</p>
         </div>
-        <a className="button primary large" href="/pilot?source=home-first-automations">Map your first three automations</a>
+        <div className="automationCtaActions">
+          <a className="button primary large" href="/pilot?source=home-first-automations">Map your first three automations</a>
+          <a className="watchLink dark" href="/pilot-program">See the 30-day pilot <ArrowRight size={18} /></a>
+        </div>
       </div>
     </section>
   );

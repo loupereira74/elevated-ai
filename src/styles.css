@@ -917,6 +917,19 @@ img {
   max-width: 650px;
 }
 
+.automationCtaActions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.automationCtaActions .watchLink {
+  color: #dff7dd;
+  white-space: nowrap;
+}
+
 .walkthroughSection {
   align-items: center;
   border-top: 1px solid var(--line);
@@ -2615,6 +2628,19 @@ select {
 .useCaseCard strong {
   font-size: 20px;
   line-height: 1.15;
+}
+
+.useCaseOutcome {
+  background: #eff8ef;
+  border: 1px solid #d9ead7;
+  border-radius: 999px;
+  color: var(--green-dark);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-top: 12px;
+  padding: 7px 10px;
 }
 
 .useCaseCard p {
@@ -4519,6 +4545,17 @@ select,
   .automationCta {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .automationCtaActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .automationCtaActions .button,
+  .automationCtaActions .watchLink {
+    justify-content: center;
+    width: 100%;
   }
 
   .pilotScorecard > div {
