@@ -4245,6 +4245,7 @@ select,
     border: 1px solid var(--line);
     border-radius: 8px;
     box-shadow: 0 20px 70px rgba(0, 0, 0, 0.18);
+    color: var(--ink);
     display: grid;
     gap: 8px;
     padding: 14px;
@@ -4260,6 +4261,7 @@ select,
     background: #f3f5f2;
     border: 0;
     border-radius: 6px;
+    color: var(--ink);
     display: inline-flex;
     height: 38px;
     justify-content: center;
@@ -4269,8 +4271,11 @@ select,
 
   .mobileMenu a {
     border-radius: 6px;
+    color: var(--ink);
+    display: block;
     font-weight: 700;
     padding: 12px;
+    text-decoration: none;
   }
 
   .mobileMenu > button:not([aria-label="Close navigation"]) {

@@ -171,6 +171,7 @@
 - Homepage conversion polish audit passes: use-case cards now show six concise outcome lines, the pilot path section links to `/pilot-program` as a learn-more step, and desktop/mobile checks show no horizontal overflow.
 - Homepage trust/conversion audit passes: added a "Works with your systems" strip with seven system categories and a `/integrations` link, plus six pilot outcomes measured; desktop/mobile checks show no horizontal overflow.
 - Mobile hero crop audit passes: homepage, field sales, field service, use-case pages, security, pilot, pilot-program, voice-commands, and integrations now use page-specific mobile background positions instead of the generic center crop; no horizontal overflow across audited routes.
+- Mobile menu readability audit passes: app-demo and voice-commands mobile menus render dark readable links on the white menu panel with no horizontal overflow.
 
 **Follow-up Polish**
 - Add final brand assets when available.
