@@ -723,6 +723,9 @@ function SiteFooter() {
         <div>
           <strong>Product</strong>
           <a href="/#use-cases">Use cases</a>
+          <a href="/voice-commands">Voice commands</a>
+          <a href="/integrations">Integrations</a>
+          <a href="/pilot-program">30-day pilot</a>
           <a href="/app-demo">App demo</a>
           <a href="/security">Security</a>
           <a href="/pilot">Request pilot</a>
@@ -735,6 +738,7 @@ function SiteFooter() {
         </div>
         <div>
           <strong>Pilot</strong>
+          <a href="/pilot-program">Pilot program</a>
           <a href="/pilot#pilot-form">Map first automations</a>
           <a href="/field-service-brief">Field-service brief</a>
           <a href="/pilot?source=footer">Start a 30-day pilot</a>
@@ -2623,6 +2627,239 @@ function PilotPage() {
   );
 }
 
+const pilotProgramSteps = [
+  ["Week 1", "Map workflows and systems", "Choose one team, identify the first three automations, confirm approval rules, and map required fields in the systems you already use."],
+  ["Week 2", "Launch with real users", "Start with a focused group using voice capture, photos, videos, and commands during actual work instead of a demo-only sandbox."],
+  ["Week 3", "Tune drafts and approvals", "Review what Elevated AI prepares, adjust wording and field mapping, and tighten the human-review queue before anything syncs."],
+  ["Week 4", "Measure the scorecard", "Review admin time reduced, follow-ups captured, records completed, rework avoided, and the expansion path for the next team."],
+];
+
+const pilotMetrics = [
+  "Admin hours reduced",
+  "Follow-ups captured",
+  "Records completed",
+  "Emails and tasks drafted",
+  "Photos and notes attached",
+  "Office rework avoided",
+];
+
+function PilotProgramPage() {
+  return (
+    <main className="productPage pilotProgramPage" id="top">
+      <SiteHeader source="pilot-program" />
+
+      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${pilotWorkshopImage})` }}>
+        <div>
+          <span className="eyebrow">30-day pilot</span>
+          <h1>Prove three automations before changing the whole operation.</h1>
+          <p>Start small with one team, three tedious workflows, human review rules, connected systems, and a scorecard that shows whether Elevated AI is saving real admin time.</p>
+          <div className="heroActions">
+            <a className="button primary large" href="/pilot?source=pilot-program-hero">Map a pilot</a>
+            <a className="watchLink" href="#pilot-plan">See the plan <ArrowRight size={18} /></a>
+          </div>
+        </div>
+        <aside className="productHeroPanel">
+          {["One team or workflow", "Three automations", "Human review rules", "Connected systems", "Time-savings scorecard"].map((item) => (
+            <span key={item}><CheckCircle size={17} weight="fill" />{item}</span>
+          ))}
+        </aside>
+      </section>
+
+      <section className="contentSection productDetailSection" id="pilot-plan">
+        <SectionHeader title="A pilot should feel practical from day one" kicker="The goal is not a vague AI experiment. The goal is a small, measured path from voice capture to reviewed system updates." />
+        <div className="productTimeline">
+          {pilotProgramSteps.map(([week, title, text]) => (
+            <article key={week}>
+              <span>{week}</span>
+              <strong>{title}</strong>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="contentSection soft productSplitSection">
+        <div>
+          <span className="eyebrow">Scorecard</span>
+          <h2>Measure the tedious work that disappears.</h2>
+          <p>Each pilot should be judged by operational outcomes, not novelty. Elevated AI focuses on fewer manual updates, better capture, cleaner records, and faster follow-through.</p>
+          <a className="button primary large" href="/pilot?source=pilot-program-scorecard">Request pilot</a>
+        </div>
+        <div className="scorecardGrid">
+          {pilotMetrics.map((item) => (
+            <article key={item}><CheckCircle size={18} weight="fill" /><strong>{item}</strong></article>
+          ))}
+        </div>
+      </section>
+
+      <section className="finalCta">
+        <Logo />
+        <div>
+          <h2>Start with the first three automations.</h2>
+          <p>Tell us where manual work slows your team down and we will map a practical 30-day pilot.</p>
+        </div>
+        <a className="button primary large" href="/pilot?source=pilot-program-footer">Map a pilot</a>
+        <a className="watchLink dark" href="/app-demo">See app demo <ArrowRight size={18} /></a>
+      </section>
+      <SiteFooter />
+    </main>
+  );
+}
+
+const commandExamples = [
+  { title: "Send invoice and photos", command: "Send Sarah the invoice and job photos.", outcome: "Drafts the email, attaches the right files, and logs the communication.", icon: FileText },
+  { title: "Check my schedule", command: "What is next on my schedule?", outcome: "Summarizes the next appointment, travel context, and customer notes.", icon: CalendarCheck },
+  { title: "Create a follow-up", command: "Follow up next Tuesday about the generator quote.", outcome: "Creates the task, links it to the customer, and adds it to the digest.", icon: BellRinging },
+  { title: "Update the system", command: "Close out this job and note the corrosion risk.", outcome: "Drafts the work-order update, risk note, and review item.", icon: CloudCheck },
+  { title: "Email a recap", command: "Send a recap of the meeting with three next steps.", outcome: "Drafts the message and creates tasks for the owners.", icon: NotePencil },
+  { title: "Ask company memory", command: "What did John say about the Smith job?", outcome: "Searches captured notes, photos, and history for the answer.", icon: MagnifyingGlass },
+];
+
+function VoiceCommandsPage() {
+  return (
+    <main className="productPage voiceCommandsPage" id="top">
+      <SiteHeader source="voice-commands" />
+
+      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${fieldMemoryHeroImage})` }}>
+        <div>
+          <span className="eyebrow">Voice commands</span>
+          <h1>Ask your AI assistant to handle the tedious next step.</h1>
+          <p>Elevated AI does more than capture notes. Workers can speak natural commands that draft emails, tasks, invoices, updates, reminders, searches, and summaries for review.</p>
+          <div className="heroActions">
+            <a className="button primary large" href="/pilot?source=voice-commands-hero">Map command workflows</a>
+            <a className="watchLink" href="/app-demo">See app demo <Play size={18} weight="fill" /></a>
+          </div>
+        </div>
+        <aside className="voiceCommandPreview">
+          <span>Say</span>
+          <strong>"Email the customer the invoice, attach the photos, and remind me to follow up Friday."</strong>
+          <p>Elevated AI prepares the email, gathers context, creates the reminder, and waits for review.</p>
+        </aside>
+      </section>
+
+      <section className="contentSection productDetailSection">
+        <SectionHeader title="Commands should sound like work, not software" kicker="People should not memorize fields or workflows. They should say what they need done and review the prepared action before it syncs." />
+        <div className="commandExampleGrid">
+          {commandExamples.map(({ title, command, outcome, icon: Icon }) => (
+            <article className="automationCard" key={title}>
+              <header>
+                <span><Icon size={22} weight="fill" /></span>
+                <strong>{title}</strong>
+              </header>
+              <div className="sayLine">
+                <small>Say</small>
+                <p>"{command}"</p>
+              </div>
+              <div className="doesLine">
+                <small>Elevated AI prepares</small>
+                <p>{outcome}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="contentSection soft productSplitSection">
+        <div>
+          <span className="eyebrow">Control</span>
+          <h2>Voice commands still need human review.</h2>
+          <p>The assistant prepares actions, but sensitive updates can be routed through review rules, role permissions, and audit history before anything is sent or synced.</p>
+        </div>
+        <div className="productChecklist">
+          {["Review before send", "Approval rules by action type", "Scoped API access", "Audit history", "Editable drafts", "Private company memory"].map((item) => (
+            <span key={item}><CheckCircle size={17} weight="fill" />{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="finalCta">
+        <Logo />
+        <div>
+          <h2>Turn spoken requests into reviewed action.</h2>
+          <p>Start with the commands your team already wishes they could say instead of typing into systems.</p>
+        </div>
+        <a className="button primary large" href="/pilot?source=voice-commands-footer">Map command workflows</a>
+        <a className="watchLink dark" href="/integrations">See integrations <ArrowRight size={18} /></a>
+      </section>
+      <SiteFooter />
+    </main>
+  );
+}
+
+const integrationGroups = [
+  ["CRM", "Accounts, opportunities, notes, tasks, follow-ups, and field intelligence.", ["Salesforce", "HubSpot", "Dynamics 365"]],
+  ["Email & calendar", "Draft emails, schedule follow-ups, summarize meetings, and answer schedule questions.", ["Outlook", "Google Workspace", "Microsoft 365"]],
+  ["Field service", "Work-order notes, proof photos, quote requests, invoices, and inspection tasks.", ["ServiceTitan", "Jobber", "Housecall Pro"]],
+  ["Project tools", "Site observations, tasks, risks, decisions, and project memory.", ["Asana", "Monday", "Procore"]],
+  ["Ticketing & support", "Customer requests, issue summaries, escalations, and resolution notes.", ["Zendesk", "ServiceNow", "Jira"]],
+  ["Company memory", "Searchable context across customers, projects, visits, photos, videos, and decisions.", ["Knowledge base", "Data warehouse", "Internal search"]],
+];
+
+function IntegrationsPage() {
+  return (
+    <main className="productPage integrationsPage" id="top">
+      <SiteHeader source="integrations" />
+
+      <section className="productHero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.84) 46%, rgba(10, 15, 12, 0.34) 100%), url(${securityGovernanceImage})` }}>
+        <div>
+          <span className="eyebrow">Integrations</span>
+          <h1>APIs move the work into the tools your company already uses.</h1>
+          <p>Elevated AI sits between natural work and business software, preparing the records, tasks, emails, reminders, and summaries that usually require manual data entry.</p>
+          <div className="heroActions">
+            <a className="button primary large" href="/pilot?source=integrations-hero">Map your systems</a>
+            <a className="watchLink" href="/security">Review controls <ArrowRight size={18} /></a>
+          </div>
+        </div>
+        <aside className="productHeroPanel">
+          {["Draft before sync", "Scoped API access", "Field mapping", "Approval queue", "Audit history"].map((item) => (
+            <span key={item}><CheckCircle size={17} weight="fill" />{item}</span>
+          ))}
+        </aside>
+      </section>
+
+      <section className="contentSection productDetailSection">
+        <SectionHeader title="Connect where the admin work already goes" kicker="The first pilot does not need every integration. It needs the few systems where your team loses the most time to repeated updates." />
+        <div className="integrationGroupGrid">
+          {integrationGroups.map(([title, text, systems]) => (
+            <article className="integrationGroupCard" key={title}>
+              <Buildings size={26} weight="fill" />
+              <strong>{title}</strong>
+              <p>{text}</p>
+              <div>
+                {systems.map((system) => <span key={system}>{system}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="contentSection soft productSplitSection">
+        <div>
+          <span className="eyebrow">Integration path</span>
+          <h2>Start with drafts, then automate what proves reliable.</h2>
+          <p>Elevated AI can begin by preparing reviewed drafts and structured payloads. Once the workflow is trusted, approved actions can sync through APIs with clear permissions.</p>
+        </div>
+        <div className="productChecklist">
+          {["Map required fields", "Draft update payloads", "Route for approval", "Sync to system", "Log every action", "Report time saved"].map((item) => (
+            <span key={item}><CheckCircle size={17} weight="fill" />{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="finalCta">
+        <Logo />
+        <div>
+          <h2>Map the systems behind your first automations.</h2>
+          <p>Tell us the tools your team uses today and the manual updates you want Elevated AI to reduce first.</p>
+        </div>
+        <a className="button primary large" href="/pilot?source=integrations-footer">Map integrations</a>
+        <a className="watchLink dark" href="/voice-commands">See voice commands <ArrowRight size={18} /></a>
+      </section>
+      <SiteFooter />
+    </main>
+  );
+}
+
 function UseCaseLandingPage({ page }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -2761,6 +2998,18 @@ const routeMeta = {
     title: "Request a Pilot | Elevated AI",
     description: "Share your team, systems, and manual work so Elevated AI can map your first three automations and a practical 30-day pilot.",
   },
+  "/pilot-program": {
+    title: "30-Day Pilot Program | Elevated AI",
+    description: "Start with one team, three automations, human review rules, connected systems, and a scorecard for admin time saved.",
+  },
+  "/voice-commands": {
+    title: "Voice Commands | Elevated AI",
+    description: "Use natural voice commands to draft emails, tasks, invoices, follow-ups, schedule answers, system updates, and searchable company memory.",
+  },
+  "/integrations": {
+    title: "Integrations | Elevated AI",
+    description: "Connect voice capture and automation to CRM, email, calendar, field service, project, ticketing, ERP, and knowledge systems.",
+  },
   "/retail-distribution": {
     title: "Retail and Multi-Unit Operations | Elevated AI",
     description: "Help retail, restaurant, distribution, and multi-unit teams capture store visits, audits, maintenance issues, photos, follow-ups, and field intel.",
@@ -2837,6 +3086,15 @@ export function App() {
   }
   if (path === "/pilot") {
     return <PilotPage />;
+  }
+  if (path === "/pilot-program") {
+    return <PilotProgramPage />;
+  }
+  if (path === "/voice-commands") {
+    return <VoiceCommandsPage />;
+  }
+  if (path === "/integrations") {
+    return <IntegrationsPage />;
   }
   if (useCasePages[path]) {
     return <UseCaseLandingPage page={useCasePages[path]} />;

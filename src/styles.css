@@ -3593,6 +3593,214 @@ select,
   background: #fbfcfa;
 }
 
+.productPage {
+  background: #fbfcfa;
+}
+
+.productHero {
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(320px, 0.88fr) minmax(280px, 0.42fr);
+  min-height: 640px;
+  padding: 138px 56px 64px;
+}
+
+.productHero h1 {
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 0.98;
+  margin: 0 0 22px;
+  max-width: 830px;
+}
+
+.productHero p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 650px;
+}
+
+.productHeroPanel,
+.voiceCommandPreview {
+  align-self: end;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  color: var(--ink);
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+}
+
+.productHeroPanel span {
+  align-items: center;
+  color: #26322a;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  gap: 8px;
+}
+
+.productHeroPanel svg,
+.productChecklist svg,
+.scorecardGrid svg {
+  color: var(--green-dark);
+  flex: 0 0 auto;
+}
+
+.voiceCommandPreview span {
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.voiceCommandPreview strong {
+  font-size: 24px;
+  line-height: 1.22;
+}
+
+.voiceCommandPreview p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.productDetailSection {
+  padding-top: 52px;
+}
+
+.productTimeline,
+.commandExampleGrid,
+.integrationGroupGrid,
+.scorecardGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.productTimeline {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.productTimeline article,
+.integrationGroupCard,
+.scorecardGrid article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+}
+
+.productTimeline article span {
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.productTimeline article strong,
+.integrationGroupCard strong,
+.scorecardGrid strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.productTimeline article p,
+.integrationGroupCard p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.commandExampleGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.integrationGroupGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.integrationGroupCard svg {
+  color: var(--blue);
+}
+
+.integrationGroupCard div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.integrationGroupCard div span {
+  background: #f4f7f3;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 7px 10px;
+}
+
+.productSplitSection {
+  align-items: start;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: 0.7fr 1fr;
+}
+
+.productSplitSection h2 {
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1;
+  margin: 10px 0 14px;
+}
+
+.productSplitSection p {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 22px;
+  max-width: 620px;
+}
+
+.scorecardGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.scorecardGrid article,
+.productChecklist span {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.productChecklist {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+}
+
+.productChecklist span {
+  border-bottom: 1px solid #edf0ec;
+  color: #26322a;
+  font-size: 14px;
+  font-weight: 900;
+  padding-bottom: 14px;
+}
+
+.productChecklist span:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
 .pilotHero {
   background:
     linear-gradient(90deg, rgba(10, 15, 12, 0.96) 0%, rgba(10, 15, 12, 0.86) 42%, rgba(10, 15, 12, 0.42) 100%),
@@ -3989,6 +4197,8 @@ select,
 
   .securityHero,
   .securityWorkflowSection,
+  .productHero,
+  .productSplitSection,
   .pilotHero,
   .pilotFormSection {
     grid-template-columns: 1fr;
@@ -4001,7 +4211,11 @@ select,
   .briefMetaGrid,
   .briefThree,
   .briefTimeline,
-  .briefTwoColumn {
+  .briefTwoColumn,
+  .productTimeline,
+  .commandExampleGrid,
+  .integrationGroupGrid,
+  .scorecardGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -4103,14 +4317,21 @@ select,
     padding: 108px 20px 34px;
   }
 
+  .productHero {
+    min-height: auto;
+    padding: 108px 20px 34px;
+  }
+
   .securityHero h1,
-  .pilotHero h1 {
+  .pilotHero h1,
+  .productHero h1 {
     font-size: 42px;
     line-height: 1.02;
   }
 
   .securityHero p,
-  .pilotHero p {
+  .pilotHero p,
+  .productHero p {
     font-size: 16px;
   }
 
@@ -4240,6 +4461,11 @@ select,
   .briefThree,
   .briefTimeline,
   .briefTwoColumn,
+  .productTimeline,
+  .commandExampleGrid,
+  .integrationGroupGrid,
+  .scorecardGrid,
+  .productSplitSection,
   .useCaseGrid,
   .howGrid,
   .commandGrid,

@@ -166,6 +166,7 @@
 - Shared footer audit passes across homepage, field-service, pilot, app-demo, field-service brief, and regulated field teams: one footer per page, no `mailto:` links, 14 internal footer links, desktop/mobile layouts have no horizontal overflow, and print output hides the footer on the brief.
 - SEO/social audit passes: `index.html` has production title, description, canonical, favicon, Open Graph, Twitter card, and theme color metadata; `/favicon.ico` and `/og-image.webp` return 200 locally; browser route metadata updates on homepage, field-service, pilot, field-service brief, and regulated field teams with no "Prototype" title remaining.
 - Search filters results; query `pharma` returns the pharma result.
+- Product page expansion audit passes: `/pilot-program`, `/voice-commands`, and `/integrations` load locally with route-specific titles, descriptions, canonicals, relevant hero imagery, one footer, logo-to-home header behavior, no broken images, and no horizontal overflow on desktop or mobile.
 
 **Follow-up Polish**
 - Add final brand assets when available.
